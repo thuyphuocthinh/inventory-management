@@ -10,6 +10,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -28,16 +30,16 @@ public class Transaction {
     private String name;
 
     @Positive(message = "Total product can not be negative")
-    private Integer totalProduct;
+    private Integer totalProducts;
 
     @Positive(message = "Total price can not be negative")
-    private Integer totalPrice;
+    private BigDecimal totalPrice;
 
     @Enumerated(EnumType.STRING)
     private TransactionType transactionType;
 
     @Enumerated(EnumType.STRING)
-    private TransactionStatus transactionStatus;
+    private TransactionStatus status;
 
     private String note;
 
@@ -65,10 +67,10 @@ public class Transaction {
                 "updatedAt=" + updatedAt +
                 ", createdAt=" + createdAt +
                 ", description='" + note + '\'' +
-                ", transactionStatus=" + transactionStatus +
+                ", transactionStatus=" + status +
                 ", transactionType=" + transactionType +
                 ", totalPrice=" + totalPrice +
-                ", totalProduct=" + totalProduct +
+                ", totalProduct=" + totalProducts +
                 ", id=" + id +
                 '}';
     }

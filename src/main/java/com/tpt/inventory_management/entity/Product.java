@@ -34,7 +34,7 @@ public class Product {
     private BigDecimal price;
 
     @Min(value = 0, message = "Stock must not be less than 0")
-    private BigInteger stockQuantity;
+    private Integer stockQuantity;
 
     @NotBlank(message = "Description is required")
     private String description;

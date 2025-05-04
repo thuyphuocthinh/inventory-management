@@ -20,4 +20,6 @@ public class TransactionRequest {
     private Long supplierId;
 
     private String description;
+
+    private String note;
 }

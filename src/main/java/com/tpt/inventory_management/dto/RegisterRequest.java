@@ -1,5 +1,6 @@
 package com.tpt.inventory_management.dto;
 
+import com.tpt.inventory_management.enums.UserRole;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,5 +22,5 @@ public class RegisterRequest {
     @NotBlank(message = "Phone number is required")
     private String phoneNumber;
 
-    private String role;
+    private UserRole role;
 }

@@ -21,5 +21,9 @@ public class Supplier {
     @NotBlank(message = "Name is required")
     private String name;
 
+    @NotBlank(message = " Address is required")
     private String address;
+
+    @NotBlank(message = " contactInfo is required")
+    private String contactInfo;
 }
